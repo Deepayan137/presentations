@@ -12,3 +12,5 @@ logo : assets/image/logo.png
 transition : none
 published : true
 footnote : "GitPitch [ White ] Presentation Template"
+mathjax : TeX-MML-AM_HTMLorMML-full
+
