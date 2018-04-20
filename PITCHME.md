@@ -83,8 +83,10 @@ except TermNotFound:
 for hit in results:
   file_names.append(hit['text_filename'].encode('utf-8'))
 ```
-@[2]
+@[3]
 @[5-6]
 ---
+### Short Text and Long Document Representation Mode
 
+$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
 
