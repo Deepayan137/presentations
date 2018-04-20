@@ -86,7 +86,7 @@ for hit in results:
 @[3]
 @[5-6]
 ---
-#### Short Text Module
+### Short Text Module
 
 Each short text *q = w1,....,wn* is represented as a *d*-dimensional vector q' in a continuos space. Each word is represented as a *d*-dimensional vector and then we take the average of all the word vectors in order to represent the short text. We have used GloVe for obtaining the word embeding.
 
@@ -124,7 +124,7 @@ This module is made up of two components:
 
 **insert equation**
 
-We repeat the above procedure several times using multiple hops in the *short text expansion*. More specifically, when an expanded representation *q''* is output by the *short text expansion* module, the representation *q''* is treated as an initial query to the module. After repeating the above procedure for several times, the final output represenatation is used as the representation of the orignal query *q'*.
+We repeat the above procedure several times using multiple hops in the *short text expansion*. More specifically, when an expanded representation *q''* is output by the *short text expansion* module, *q''* is treated as an initial query to the module. After repeating the above procedure for several times, the final output represenatation is used as the representation of the orignal query *q'*.
 
 ---
 ### Classification module
