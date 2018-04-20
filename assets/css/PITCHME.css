@@ -32,6 +32,16 @@ html:-moz-full-screen-ancestor {
   border-radius: 10px;
 }
 
+.reveal .slides {
+    text-align: left;
+    font-size: 0.8em;
+}
+
+.reveal .slides section>* {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 .reveal .slides section .code-presenting-annotation {
   color: white;
   background: #1f1c18;
