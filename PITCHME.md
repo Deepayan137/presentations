@@ -19,19 +19,19 @@ What is short text expansion ?
 
 * "RIP, David Eddings."
 
-#### The above sentences are taken from Twitter Sentiment dataset. 
+The above sentences are taken from Twitter Sentiment dataset. 
 
 Note:
 As we can see the sentences don't make whole lot of sense to us, since the context is not present. Our immediate response would be to open up a search engine and and put the short text into the search box because we beleive that among billion of web pages there will exist some web page that will help us make sense of the short text. We sometimes also, update the query and perform another round of search.
 
 ---
-# How do humans expand short text?
-
-### flow chart
+### How do humans expand short text?
+ 
+flow chart
 
 ---
 
-# Proposed aproach
+### Proposed aproach
 
 1. We retrieving a list of documents which are relevant to the short text.
 
@@ -58,8 +58,33 @@ q', we can accurately classify short text into one of the predefined categories 
 
 ---
 
-The proposed architecture 
+The proposed architecture consists of five different modules:
 
+1. Retrieval Module
+2. Short text Representation Module
+3. Long Document Representation Module
+4. Expansion Module
+5. Classification Module
 
+---
+
+### Retrieval Module
+
+* We first use orignal short text q as a query to search for a set of potentially relvant long documents Cq from an external large collection C.
+
+* We have made use of a python search engine library called woosh for obtainig the set of relevant long documents.
+
+``` python
+with idx.searcher() as searcher:
+try:
+    results = searcher.search(query, limit = top_k)
+except TermNotFound:
+    results = []
+for hit in results:
+  file_names.append(hit['text_filename'].encode('utf-8'))
+```
+@[2]
+@[5-6]
+---
 
 
