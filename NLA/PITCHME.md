@@ -6,7 +6,7 @@
 
 ## Introduction
 
-Genertaing sentences is an important problem in unsupervised learning.Sentence generation finds its application in language modeling.One of the most popular 
+Genertaing sentences is an important problem in unsupervised learning. Sentence generation finds its application in language modeling. One of the most popular 
 approach towards learning sentence representation is by encoder decoder network 
 via RNNs. RNNs do this by maximizing the log predictive likelihood of each token 
 in the training sequence given the previous observed tokens.
@@ -15,7 +15,7 @@ in the training sequence given the previous observed tokens.
 
 1. *Exposure Bias*: While trying to generate sentences from certain laten codes, the error will acumulate exponentially with the length of the sentence. The first few words can be reasonable, however the quality of sentence detoriates quickly.
 
-2.The length of sentence generated from random latent distributiion is difficult to control.
+2. The length of sentence generated from random latent distributiion is difficult to control.
 
 ---
 Proposed approach
@@ -29,10 +29,10 @@ Problem with GANs generating sequences
 
 GANs have difficulty in generating sequences of discrete tokens, such as texts.
 
-> The gradient of the output of the discriminator network with respect to the synthetic data tells you how to slightly change the synthetic data to make it more realistic.
+*The gradient of the output of the discriminator network with respect to the synthetic data tells you how to slightly change the synthetic data to make it more realistic.
 You can make slight changes to the synthetic data only if it is based on continuous numbers. If it is based on discrete numbers, there is no way to make a slight change.
 For example, if you output an image with a pixel value of 1.0, you can change that pixel value to 1.0001 on the next step.
-If you output the word "penguin", you can't change that to "penguin + .001" on the next step, because there is no such word as "penguin + .001". You have to go all the way from "penguin" to "ostrich".
+If you output the word "penguin", you can't change that to "penguin + .001" on the next step, because there is no such word as "penguin + .001". You have to go all the way from "penguin" to "ostrich".*
                    -*Ian Goodfellow*
 ---
 
@@ -65,4 +65,17 @@ Model Architecture
 
 Experiments and Data
 
-We train our model on all sentences in the treebank. The vocaburay size of the data set is 10000 words. Models are trained using the back-propagation algorithm updating our   parameters using the Adam optimization method.
+We train our model on all sentences in the treebank. The vocaburay size of the data set is 10000 words. Models are trained using the back-propagation algorithm updating our   parameters using the Adam optimization method. A learning rate of 2*10-3 is used for generator and discriminator.
+
+---
+
+Results
+
+
+---
+
+Conclusion
+
+In conclusion, this work presents a straightforward
+but effective method to train GANs for Sentence Generation. In future work, we would like to explore GANs in other domains of NLP such as non goal-oriented dialog systems.
+
