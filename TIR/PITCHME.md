@@ -1,120 +1,159 @@
-# White
+# Short Text Expansion
 
-### A GitPitch Presentation Template
+### By Avijit.d and Deepayan (CVIT)
 
 ---
 
-## Tips!
+## Introduction
 
 <br>
 
-@fa[arrows gp-tip](Press F to go Fullscreen)
+What is short text expansion ?
+---
 
-@fa[microphone gp-tip](Press S for Speaker Notes)
+## Examples of short text
+
+* "Watching that movie makes me ROFL!"
+
+* "I bend backwards"
+
+* "RIP, David Eddings."
+
+The above sentences are taken from Twitter Sentiment dataset. 
+
+Note:
+As we can see the sentences don't make whole lot of sense to us, since the context is not present. Our immediate response would be to open up a search engine and and put the short text into the search box because we beleive that among billion of web pages there will exist some web page that will help us make sense of the short text. We sometimes also, update the query and perform another round of search.
+
+---
+### How do humans expand short text?
+ 
+flow chart
 
 ---
 
-## Template Features
+### Proposed aproach
 
-- Code Presenting |
-- Repo Source, Static Blocks, GIST |
-- Custom CSS Styling |
-- Slideshow Background Image |
-- Slide-specific Background Images |
-- Custom Logo, TOC, and Footnotes |
+1. We retrieving a list of documents which are relevant to the short text.
 
----?code=sample/go/server.go&lang=golang&title=Golang File
+2. Selectively pay attention to each retrieved document and then rank the documents.
 
-@[1,3-6](Present code found within any repo source file.)
-@[8-18](Without ever leaving your slideshow.)
-@[19-28](Using GitPitch code-presenting with (optional) annotations.)
+3. Do iterative expansion of the short text and conduct multiple rounds of search.
 
 ---
 
-@title[JavaScript Block]
+# Pipeline
 
-<p><span class="slide-title">JavaScript Block</span></p>
+### diagram from paper
 
-```javascript
-// Include http module.
-var http = require("http");
+---
 
-// Create the server. Function passed as parameter
-// is called on every request made.
-http.createServer(function (request, response) {
-  // Attach listener on end event.  This event is
-  // called when client sent, awaiting response.
-  request.on("end", function () {
-    // Write headers to the response.
-    // HTTP 200 status, Content-Type text/plain.
-    response.writeHead(200, {
-      'Content-Type': 'text/plain'
-    });
-    // Send data and end response.
-    response.end('Hello HTTP!');
-  });
+<br>
 
-// Listen on the 8080 port.
-}).listen(8080);
+An end to end trainable deep memory network is proposed which integrates useful information from relevant documents and integrates it with the orignal short text.
+
+**Problem Defination**: 
+
+> Given a collection of long documents C, we aim to learn a function f that expands a short text into richer representation q' i.e. q'=f(q,C). Based on richer representation 
+q', we can accurately classify short text into one of the predefined categories y.
+
+---
+
+The proposed architecture consists of five different modules:
+
+1. Retrieval Module
+2. Short text Representation Module
+3. Long Document Representation Module
+4. Expansion Module
+5. Classification Module
+
+---
+
+### Retrieval Module
+
+* We first use orignal short text q as a query to search for a set of potentially relvant long documents Cq from an external large collection C.
+
+* We have made use of a python search engine library called woosh for obtainig the set of relevant long documents.
+
+``` python
+with idx.searcher() as searcher:
+try:
+    results = searcher.search(query, limit = top_k)
+except TermNotFound:
+    results = []
+for hit in results:
+  file_names.append(hit['text_filename'].encode('utf-8'))
 ```
+@[3]
+@[5-6]
+---
+### Short Text Module
 
-@[1,2](You can present code inlined within your slide markdown too.)
-@[9-17](Displayed using code-syntax highlighting just like your IDE.)
-@[19-20](Again, all of this without ever leaving your slideshow.)
+Each short text *q = w1,....,wn* is represented as a *d*-dimensional vector q' in a continuos space. Each word is represented as a *d*-dimensional vector and then we take the average of all the word vectors in order to represent the short text. We have used GloVe for obtaining the word embeding.
 
----?gist=onetapbeyond/494e0fecaf0d6a2aa2acadfb8eb9d6e8&lang=scala&title=Scala GIST
+**insert math equation**
 
-@[23](You can even present code found within any GitHub GIST.)
-@[41-53](GIST source code is beautifully rendered on any slide.)
-@[57-62](And code-presenting works seamlessly for GIST too, both online and offline.)
+<!-- $$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$ -->
 
 ---
 
-## Template Help
+### Long Document Representation Module
 
-- [Code Presenting](https://github.com/gitpitch/gitpitch/wiki/Code-Presenting)
-  + [Repo Source](https://github.com/gitpitch/gitpitch/wiki/Code-Delimiter-Slides), [Static Blocks](https://github.com/gitpitch/gitpitch/wiki/Code-Slides), [GIST](https://github.com/gitpitch/gitpitch/wiki/GIST-Slides) 
-- [Custom CSS Styling](https://github.com/gitpitch/gitpitch/wiki/Slideshow-Custom-CSS)
-- [Slideshow Background Image](https://github.com/gitpitch/gitpitch/wiki/Background-Setting)
-- [Slide-specific Background Images](https://github.com/gitpitch/gitpitch/wiki/Image-Slides#background)
-- [Custom Logo](https://github.com/gitpitch/gitpitch/wiki/Logo-Setting) [TOC](https://github.com/gitpitch/gitpitch/wiki/Table-of-Contents) [Footnotes](https://github.com/gitpitch/gitpitch/wiki/Footnote-Setting)
+Each long document is also representated as a d-dimensional vector space. Similary,
+each document is *di = w1,....,wn* are represented as the average vector of the words 
+in the documents, i.e,
 
----
-
-## Go GitPitch Pro!
-
-<br>
-<div class="left">
-    <i class="fa fa-user-secret fa-5x" aria-hidden="true"> </i><br>
-    <a href="https://gitpitch.com/pro-features" class="pro-link">
-    More details here.</a>
-</div>
-<div class="right">
-    <ul>
-        <li>Private Repos</li>
-        <li>Private URLs</li>
-        <li>Password-Protection</li>
-        <li>Image Opacity</li>
-        <li>SVG Image Support</li>
-    </ul>
-</div>
+**insert equation**
 
 ---
 
-### Questions?
+### Expansion Module
 
-<br>
+This module is made up of two components:
 
-@fa[twitter gp-contact](@gitpitch)
+1. given query representation *q'* , what information should we read from the memory
 
-@fa[github gp-contact](gitpitch)
+2. how to integrate the information in the orignal query representaion *q'*?
 
-@fa[medium gp-contact](@gitpitch)
+*Memory Reading*: We try to identify relevance of each document with respect to the query. This is achieved by calculating the inner product between the query *q'* and each document *di* and later a soft max function is used to calculate the attention probaility of each document *i* in the memory.
 
----?image=assets/image/gitpitch-audience.jpg&opacity=100
+**insert softmax equations**
 
-@title[Download this Template!]
+---
 
-### <span class="white">Get your presentation started!</span>
-### [Download this template @fa[external-link gp-download]](https://gitpitch.com/template/download/white)
+*Short Text Expansion*: We try to reformulte the orignal short text with the information from the memory reading component. For this we used a Gated Recurrent Unit , which is automtically able to determine the weight of the two sources of information.
+
+**insert equation**
+
+We repeat the above procedure several times using multiple hops in the *short text expansion*. More specifically, when an expanded representation *q''* is output by the *short text expansion* module, *q''* is treated as an initial query to the module. After repeating the above procedure for several times, the final output represenatation is used as the representation of the orignal query *q'*.
+
+---
+### Classification module
+
+In this module, we keep the orignal short text representation *q'* and represent the final short text representation as a concatenation of *q'* and *q''* i.e 
+*q_final = [q',q'']*, which is then used to predict the category of the short text.
+
+*insert equation 12*
+
+A fully connected layer is first applied to the short text representation followed by a 
+softmax transformation, which gives us a distribution over the categories.
+
+---
+
+### Experiments
+
+#### Data Sets
+
+We have used Twitter Data set, a large corpus for positive and negative sentiment classification. For each short text we associated top 20 relevant document as its memory.
+
+---
+### Results
+
+**insert table containing results**
+
+
+---
+### Conclusion
+
+
+---
 
