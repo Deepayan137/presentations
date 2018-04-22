@@ -48,9 +48,10 @@ As we can see the sentences don't make whole lot of sense to us, since the conte
 
 <br>
 
+**Problem Definition**: 
+
 An end to end trainable deep memory network is proposed which extracts useful information from relevant documents and integrates it with the orignal short text.
 
-**Problem Definition**: 
 
 * Given a collection of long documents $C$ and a query $q$, we first retrieve a set of potential relevant documents $C_q$.
 
