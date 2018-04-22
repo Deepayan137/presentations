@@ -27,7 +27,7 @@ As we can see the sentences don't make whole lot of sense to us, since the conte
 ---
 ### How do humans expand short text?
  
-![flowchart](flowchart.jpg)
+![flowchart](./flowchart.jpg)
 
 ---
 
