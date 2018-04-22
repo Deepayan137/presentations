@@ -27,7 +27,8 @@ As we can see the sentences don't make whole lot of sense to us, since the conte
 ---
 ### How do humans expand short text?
  
-flow chart
+<a><img src="flowchart" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
 ---
 
