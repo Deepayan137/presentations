@@ -138,12 +138,12 @@ $$\hat{o} = \sum_{i=1}^{K}a_id_i$$
 ---
 ### Classification module
 
-* In this module, we keep the orignal short text representation $\hat{q}$ and represent the final short text representation as $q_final = [\hat{q},\hat{q'}]$, which is then used to predict the category of the short text.
+* In this module, we keep the orignal short text representation $\hat{q}$ and represent the final short text representation as $q_{final} = [\hat{q},\hat{q'}]$, which is then used to predict the category of the short text.
 
 * A fully connected layer is first applied to the short text representation followed by a 
 softmax transformation, which gives us a distribution over the categories.
 
-$$p(y|q_final) = Softmax(W^y q_final)$$
+$$p(y|q_{final}) = Softmax(W^y q_final)$$
 
 ---
 
