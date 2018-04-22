@@ -111,8 +111,6 @@ $$ d = \frac{\sum_{i=1}^{n} w_i}{n}$$
 
 ### Expansion Module
 
-This module is made up of two components:
-
 1. Given query representation $\hat{q}$ , what information should we read from the context memory?
 
 2. How to integrate the information in the orignal query representaion $\hat{q}$ with the information extracted from memory $d_i$?
