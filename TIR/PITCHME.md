@@ -125,22 +125,25 @@ $$\hat{o} = \sum_{i=1}^{K}a_id_i$$
 
 ---
 
-*Short Text Expansion*: We try to reformulte the orignal short text with the information from the memory reading component. For this we used a Gated Recurrent Unit , which is automtically able to determine the weight of the two sources of information.
+### Short Text Expansion 
 
-**insert equation**
+* How to integrate information from original representation $\hat{q}$, and information from retrieved memory $\hat{o}$?
 
-We repeat the above procedure several times using multiple hops in the *short text expansion*. More specifically, when an expanded representation *q''* is output by the *short text expansion* module, *q''* is treated as an initial query to the module. After repeating the above procedure for several times, the final output represenatation is used as the representation of the orignal query *q'*.
+* We can make use of an GRU unit where the hidden states are initialized as $\hat{o}$ and input is $\hat{q}$. 
+
+* GRU should be able to automatically weight the importance of query and long documents.
+
+* We repeat the above procedure several times using multiple hops in the *short text expansion* to get the expanded representation $\hat{q'}$.
 
 ---
 ### Classification module
 
-In this module, we keep the orignal short text representation *q'* and represent the final short text representation as a concatenation of *q'* and *q''* i.e 
-*q_final = [q',q'']*, which is then used to predict the category of the short text.
+* In this module, we keep the orignal short text representation $\hat{q}$ and represent the final short text representation as $q_final = [\hat{q},\hat{q'}]$, which is then used to predict the category of the short text.
 
-*insert equation 12*
-
-A fully connected layer is first applied to the short text representation followed by a 
+* A fully connected layer is first applied to the short text representation followed by a 
 softmax transformation, which gives us a distribution over the categories.
+
+$$p(y|q_final) = Softmax(W^y q_final)$$
 
 ---
 
