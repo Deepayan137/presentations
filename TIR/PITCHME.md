@@ -90,10 +90,10 @@ for hit in results:
 @[5-6]
 ---
 ### Short Text Representation Module
-* Each word in a short text query is represented as a 100-dimension vector.
+* Each word in a short text query is represented as a 100-dimension vector ($w_1, w_2, ..., w_n$).
 
 * To represent a whole query ($\hat{q}$), we simply take the average of all the word representations.
-
+$$\hat{q} = \frac{\sum_{i=1}{n} w_i}{n}$$
 * We use GloVe library for word representation.
 ---
 
