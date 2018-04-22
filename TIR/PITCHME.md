@@ -41,18 +41,19 @@ As we can see the sentences don't make whole lot of sense to us, since the conte
 
 ---
 
-# Pipeline
+### Pipeline
 ![flowchart](./TIR/model.png)
 
 ---
 
 <br>
 
-An end to end trainable deep memory network is proposed which integrates useful information from relevant documents and integrates it with the orignal short text.
+An end to end trainable deep memory network is proposed which extracts useful information from relevant documents and integrates it with the orignal short text.
 
-**Problem Defination**: 
+**Problem Definition**: 
 
-> Given a collection of long documents C, we aim to learn a function f that expands a short text into richer representation q' i.e. q'=f(q,C). Based on richer representation 
+> Given a collection of long documents $$C$$ and a query $$q$$, we first retrieve a set of potential relevant documents $$C_q$$.
+> we aim to learn a function f that expands a short text into richer representation q' i.e. q'=f(q,C). Based on richer representation 
 q', we can accurately classify short text into one of the predefined categories y.
 
 ---
