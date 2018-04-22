@@ -52,7 +52,7 @@ An end to end trainable deep memory network is proposed which extracts useful in
 
 **Problem Definition**: 
 
-> Given a collection of long documents $$C$$ and a query $$q$$, we first retrieve a set of potential relevant documents $$C_q$$.
+> Given a collection of long documents $C$ and a query $$q$$, we first retrieve a set of potential relevant documents $$C_q$$.
 > we aim to learn a function f that expands a short text into richer representation q' i.e. q'=f(q,C). Based on richer representation 
 q', we can accurately classify short text into one of the predefined categories y.
 
