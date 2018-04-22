@@ -64,7 +64,7 @@ An end to end trainable deep memory network is proposed which extracts useful in
 The proposed architecture consists of five different modules:
 
 1. Retrieval Module
-2. Short text Representation Module
+2. Short Text Representation Module
 3. Long Document Representation Module
 4. Expansion Module
 5. Classification Module
@@ -89,14 +89,12 @@ for hit in results:
 @[3]
 @[5-6]
 ---
-### Short Text Module
+### Short Text Representation Module
+* Each word in a short text query is represented as a 100-dimension vector.
 
-Each short text *q = w1,....,wn* is represented as a *d*-dimensional vector q' in a continuos space. Each word is represented as a *d*-dimensional vector and then we take the average of all the word vectors in order to represent the short text. We have used GloVe for obtaining the word embeding.
+* To represent a whole query, we simply take the average of all the word representations.
 
-**insert math equation**
-
-<!-- $$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$ -->
-
+* We use GloVe library for word representation.
 ---
 
 ### Long Document Representation Module
