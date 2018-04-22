@@ -99,9 +99,14 @@ $$\hat{q} = \frac{\sum_{i=1}^{n} w_i}{n}$$
 
 ### Long Document Representation Module
 
-Each long document is also representated as a d-dimensional vector space. Similary,
-each document is *di = w1,....,wn* are represented as the average vector of the words 
-in the documents, i.e,
+* Each word in a long document $d_i\in C_q$, is represented as a 100-dimensional vector ($w_1, w_2, ..., w_n$).
+
+* To present a whole document (\hat{d_i}), we again take average of all the words.
+
+$$\hat{d_i} = \frac{\sum_{i=1}^{n} w_i}{n}$$
+
+* We use GloVe library for word representation.
+
 
 **insert equation**
 
