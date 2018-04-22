@@ -33,7 +33,7 @@ As we can see the sentences don't make whole lot of sense to us, since the conte
 
 ### Proposed aproach
 
-1. We retrieving a list of documents which are relevant to the short text.
+1. We retrieve a list of documents which are relevant to the short text.
 
 2. Selectively pay attention to each retrieved document and then rank the documents.
 
@@ -42,8 +42,7 @@ As we can see the sentences don't make whole lot of sense to us, since the conte
 ---
 
 # Pipeline
-
-### diagram from paper
+![flowchart](./TIR/model.png)
 
 ---
 
