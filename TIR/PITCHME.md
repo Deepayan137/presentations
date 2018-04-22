@@ -103,7 +103,7 @@ $$\hat{q} = \frac{\sum_{i=1}^{n} w_i}{n}$$
 
 * To present a whole document ($d_i$), we again take average of all the words.
 
-$$q = \frac{\sum_{i=1}^{n} w_i}{n}$$
+$$q_i = \frac{\sum_{i=1}^{n} w_i}{n}$$
 
 * We use GloVe library for word representation.
 
