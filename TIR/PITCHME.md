@@ -113,13 +113,22 @@ $$ d = \frac{\sum_{i=1}^{n} w_i}{n}$$
 
 This module is made up of two components:
 
-1. given query representation *q'* , what information should we read from the memory
+1. Given query representation $\hat{q}$ , what information should we read from the context memory?
 
-2. how to integrate the information in the orignal query representaion *q'*?
+2. How to integrate the information in the orignal query representaion $\hat{q}$ with the information extracted from memory $d_i$?
 
-*Memory Reading*: We try to identify relevance of each document with respect to the query. This is achieved by calculating the inner product between the query *q'* and each document *di* and later a soft max function is used to calculate the attention probaility of each document *i* in the memory.
+*Soft Attention:*
 
-**insert softmax equations**
+$$a_i = softmax(\hat{q}^T d_i)$$
+
+Information read from the documents are defined as:
+
+$$\hat{o} = \sum_{i=1}^{K}a_id_i$$
+
+
+
+*Memory Reading*: We try to identify importance of each document with respect to the query. This is achieved by calculating the inner product between the query *q'* and each document *di* and later a soft max function is used to calculate the attention probaility of each document *i* in the memory.
+
 
 ---
 
