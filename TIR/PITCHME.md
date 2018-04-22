@@ -123,11 +123,6 @@ Information read from the documents are defined as:
 
 $$\hat{o} = \sum_{i=1}^{K}a_id_i$$
 
-
-
-*Memory Reading*: We try to identify importance of each document with respect to the query. This is achieved by calculating the inner product between the query *q'* and each document *di* and later a soft max function is used to calculate the attention probaility of each document *i* in the memory.
-
-
 ---
 
 *Short Text Expansion*: We try to reformulte the orignal short text with the information from the memory reading component. For this we used a Gated Recurrent Unit , which is automtically able to determine the weight of the two sources of information.
