@@ -143,7 +143,7 @@ $$\hat{o} = \sum_{i=1}^{K}a_id_i$$
 * A fully connected layer is first applied to the short text representation followed by a 
 softmax transformation, which gives us a distribution over the categories.
 
-$$p(y|q_{final}) = Softmax(W^y q_final)$$
+$$p(y|q_{final}) = Softmax(W^y q_{final})$$
 
 ---
 
@@ -154,13 +154,23 @@ $$p(y|q_{final}) = Softmax(W^y q_final)$$
 We have used Twitter Data set, a large corpus for positive and negative sentiment classification. For each short text we associated top 20 relevant document as its memory.
 
 ---
-### Results
+### Challenges and Limitations
 
-**insert table containing results**
+* Due to some thread clashing between whoosh and Pytorch, we are not able to retrieve documents and send them GPU quickly.
+
+* Due to this, training procedure is very slow.
+
+* Each batch consists of 5 samples (if we make more than this, the program is getting stuck).
+
+* To process each batch, the overall system is taking around 3-4 minutes.
+
+Codes are available at: [https://github.com/avijit9/short_text_expansion](https://github.com/avijit9/short_text_expansion). 
 
 
 ---
 ### Conclusion
+
+
 
 
 ---
