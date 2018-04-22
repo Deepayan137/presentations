@@ -1,6 +1,6 @@
 # Short Text Expansion
 
-### By Avijit.d and Deepayan (CVIT)
+### By Avijit Dasgupta and Deepayan Das (CVIT)
 
 ---
 
@@ -8,7 +8,7 @@
 
 <br>
 
-What is short text expansion ?
+What is short text expansion?
 ---
 
 ## Examples of short text
@@ -19,7 +19,7 @@ What is short text expansion ?
 
 * "RIP, David Eddings."
 
-The above sentences are taken from Twitter Sentiment dataset. 
+The above sentences are taken from [Twitter Sentiment dataset](http://thinknook.com/twitter-sentiment-analysis-training-corpus-dataset-2012-09-22/). 
 
 Note:
 As we can see the sentences don't make whole lot of sense to us, since the context is not present. Our immediate response would be to open up a search engine and and put the short text into the search box because we beleive that among billion of web pages there will exist some web page that will help us make sense of the short text. We sometimes also, update the query and perform another round of search.
