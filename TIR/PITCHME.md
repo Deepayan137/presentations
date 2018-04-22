@@ -102,6 +102,7 @@ $$\hat{q} = \frac{\sum_{i=1}^{n} w_i}{n}$$
 * Each word in a long document $d_i\in C_q$, is represented as a 100-dimensional vector ($w_1, w_2, ..., w_n$).
 
 * To present a whole document ($d_i$), we again take average of all the words.
+
 $$\hat{q} = \frac{\sum_{i=1}^{n} w_i}{n}$$
 
 * We use GloVe library for word representation.
