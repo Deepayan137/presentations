@@ -4,8 +4,8 @@
 
 ---
 
-## Introduction
-
+### Introduction
+uld be added to the state. In the next step, we’ll combine these two to create an update to the state.
 Genertaing sentences is an important problem in unsupervised learning. Sentence generation finds its application in language modeling. One of the most popular 
 approach towards learning sentence representation is by encoder decoder network 
 via RNNs. RNNs do this by maximizing the log predictive likelihood of each token 
@@ -18,14 +18,14 @@ in the training sequence given the previous observed tokens.
 2. The length of sentence generated from random latent distributiion is difficult to control.
 
 ---
-Proposed approach
+### Proposed approach
  
 In this project we propose to generate realistic sentences using Generative Adversarial
 Networks. We use LSTMs as generators as well as discriminators. The discriminator learns to discriminate between generated and real sentences while the generator tries to fool the discriminator by generating high quality text.
 
 ---
 
-Problem with GANs generating sequences
+### Problem with GANs generating sequences
 
 GANs have difficulty in generating sequences of discrete tokens, such as texts.
 
@@ -36,13 +36,13 @@ If you output the word "penguin", you can't change that to "penguin + .001" on t
                    -*Ian Goodfellow*
 ---
 
-Proposed Approach
+### Proposed Approach
 
 We try to learn intermediate representations that are discrete. We can use stochastic neural networks, where each layer computes the parameters of some (discrete) distribution, and its forward pass consists of taking a sample from that parametric distribution. However, the difficulty is that we can’t backpropagate through samples.
 
 ---
 
-Gumbel Softmax distribution
+### Gumbel Softmax distribution
 
 We use Gumbel distribution which can be smoothly deformed into the categorical distribution, and provides an efficient way to draw samples z. As such it allows 
 gradients to flow back during back propagation.
@@ -53,7 +53,7 @@ As temerature τ→0, the softmax becomes an argmax and the Gumbel-Softmax distr
 
 ---
 
-Model Architecture
+### Model Architecture
 
 * We give the generator random noise, z ∼ *N(0, I). Sample z is of shape *nxd* where n is the length of sequence and d is the fixed length noise vector at each time step.
 
@@ -63,18 +63,18 @@ Model Architecture
 
 --- 
 
-Experiments and Data
+### Experiments and Data
 
-We train our model on all sentences in the treebank. The vocaburay size of the data set is 10000 words. Models are trained using the back-propagation algorithm updating our   parameters using the Adam optimization method. A learning rate of 2*10-3 is used for generator and discriminator.
-
----
-
-Results
-
+We train our model on all sentences in the treebank. The vocaburay size of the data set is 10000 words. Models are trained using the back-propagation algorithm updating our   parameters using the Adam optimization method. A learning rate of $2*10^-3$ is used for generator and discriminator.
 
 ---
 
-Conclusion
+### Challenges and limitations
+
+
+---
+
+### Conclusion
 
 In conclusion, this work presents a straightforward
 but effective method to train GANs for Sentence Generation. In future work, we would like to explore GANs in other domains of NLP such as non goal-oriented dialog systems.
