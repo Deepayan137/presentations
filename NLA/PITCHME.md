@@ -65,17 +65,25 @@ As temerature τ→0, the softmax becomes an argmax and the Gumbel-Softmax distr
 
 ### Experiments and Data
 
-We train our model on all sentences in the treebank. The vocaburay size of the data set is 10000 words. Models are trained using the back-propagation algorithm updating our   parameters using the Adam optimization method. A learning rate of $2*10^-3$ is used for generator and discriminator.
+We train our model on all sentences in the treebank. The vocaburay size of the data set is $10000$ words. Models are trained using the back-propagation algorithm updating our   parameters using the Adam optimization method. A learning rate of $2x10^-3$ is used for generator and discriminator.
 
 ---
 
-### Challenges and limitations
+### Results
 
+The model has learned to generate short phrases which are meaningful but the sentence as a whole does not make any sense. 
+
+1. for nov call historical grades *gary anticipates* abortions *microsoft withdrawal compound compound nov expected has population expected other marketplace reversal* prosecutions transplants appear letters institute artist appetite appetite appetite soul <pad> directs <pad> analysis classical disrupted weakest contracted contracted salary dealt affordable urge spooked degrees million finnish bribery pcs heard wary expectations has formerly edge contributing carr facsimile helpful consist
+n placed
+
+2. Byale shed modify assessed challenging township husband degrees preferences <pad> urge carson claiming covering alleviate similarity conditional camp weakest russell plo detergent contributing gary anticipates acknowledging compound has totaled mixed race pickens deregulation turkey nov compound folks deregulation compound doors drinks broaden eliminated redeemed banned confused exchange ralph gently potentially altered re-election cooled dead leaped backdrop mass
+
+The above two paragraphs address somewhat market related and political sentiments respectively. However there is more scope for imporovement.
 
 ---
 
 ### Conclusion
 
-In conclusion, this work presents a straightforward
-but effective method to train GANs for Sentence Generation. In future work, we would like to explore GANs in other domains of NLP such as non goal-oriented dialog systems.
+In conclusion, this work presents a straightforward  method to train GANs for Sentence Generation. In future work, we would like to explore techniques like proffesor forcing
+so that the hidden state representations of fake and real samples could be as close as possible. This will let the generator generate sentences which are more more semantically meaningful.
 
