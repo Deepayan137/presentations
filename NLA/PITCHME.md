@@ -73,11 +73,11 @@ We train our model on all sentences in the treebank. The vocaburay size of the d
 
 The model has learned to generate short phrases which are meaningful but the sentence as a whole does not make any sense. 
 
-1. for nov call historical grades *gary anticipates* abortions *microsoft withdrawal compound compound nov expected has population expected other marketplace reversal* prosecutions transplants appear letters institute artist appetite appetite appetite soul <pad> directs <pad> analysis classical disrupted weakest contracted contracted salary dealt affordable urge spooked degrees million finnish bribery pcs heard wary expectations has formerly edge contributing carr facsimile helpful consist
+* for nov call historical grades *gary anticipates* abortions *microsoft withdrawal compound compound nov expected has population expected other marketplace reversal* prosecutions transplants appear letters institute artist appetite appetite appetite soul <pad> directs <pad> analysis classical disrupted weakest contracted contracted salary dealt affordable urge spooked degrees million finnish bribery pcs heard wary expectations has formerly edge contributing carr facsimile helpful consist
 n placed
 ---
 
-2. Byale shed modify assessed challenging township husband degrees preferences <pad> urge carson claiming covering alleviate similarity conditional camp weakest russell plo detergent contributing gary anticipates acknowledging compound has totaled mixed race pickens deregulation turkey nov compound folks deregulation compound doors drinks broaden eliminated redeemed banned confused exchange ralph gently potentially altered re-election cooled dead leaped backdrop mass
+* Byale shed modify assessed challenging township husband degrees preferences <pad> urge carson claiming covering alleviate similarity conditional camp weakest russell plo detergent contributing gary anticipates acknowledging compound has totaled mixed race pickens deregulation turkey nov compound folks deregulation compound doors drinks broaden eliminated redeemed banned confused exchange ralph gently potentially altered re-election cooled dead leaped backdrop mass
 
 The above two paragraphs address somewhat market related and political sentiments respectively. However there is more scope for imporovement.
 
