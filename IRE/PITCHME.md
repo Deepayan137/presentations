@@ -25,9 +25,7 @@ for our data set.
 
 ![Emo2](./IRE/static/network.jpeg)
 
-* We then concatenate the the three sentence embeddings (one for each
-turn of conversation) and feed it to a fully connected neural network 
-whose output dimension is equal to the number of output classes.
+* We then concatenate the the three sentence embeddings and feed it to a FCN whose output dimension is equal to the number of output classes.
 ---
 
 ## Result
@@ -83,15 +81,22 @@ whose output dimension is equal to the number of output classes.
     <td class="tg-c3ow"><br>71.07</td>
   </tr>
 </table>
+ 
  ---
 
 ## Overall Performance
-
-We compared our work with the SS-LSTM presented in the paper ![Sentiment semantic approach for emotion detection in textual conversations](https://arxiv.org/pdf/1707.06996.pdf). Our network performed at par with SS-LSTM if not better, even though we used only one word embedding matrix i.e. the output from our self attentive neural BiLSTM network. 
 
 The average F1-scores are as follows:
 
  * SS-LSTM: 71.34
  * Ours: 71.08 
 
+---
 
+## Observation 
+ 
+We compared our work with the SS-LSTM presented in the paper ![Sentiment semantic approach for emotion detection in textual conversations](https://arxiv.org/pdf/1707.06996.pdf). Our network performed at par with SS-LSTM if not better, even though we used only one word embedding matrix i.e. the output from our self attentive neural BiLSTM network. 
+
+
+
+---
