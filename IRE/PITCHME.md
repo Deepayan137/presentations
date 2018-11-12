@@ -28,6 +28,9 @@ for our data set.
 ---
 
 ## Result
+
+* We compared our work with the method presented in the [SS-LSTM paper](https://arxiv.org/pdf/1707.06996.pdf).
+
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
@@ -90,5 +93,5 @@ The average F1-scores are as follows:
 ---
 ## Observation 
 
-We compared our work with the method presented in the [SS-LSTM paper](https://arxiv.org/pdf/1707.06996.pdf). Our network performed at par with SS-LSTM if not better, even though we used only one word embedding matrix i.e. the output from our self attentive neural BiLSTM network. 
+ Our network performed at par with SS-LSTM if not better, even though we used only one word embedding matrix i.e. the output from our self attentive neural BiLSTM network. 
 ---
