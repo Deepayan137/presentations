@@ -4,25 +4,20 @@
 ### Bi-LSTM network for Emotion Detection
 
 ---
-
 ## Input Embeddings
 
 * We used pre-trained GloVe model which was trained on 2 Billion tweets. We use this pretrained model to generate word embeddings
 for our data set.
 
 * We then feed the word embeddings to the sentence embedding model to get a sentence level representation for each turn of conversation.
-
 ---
-
 ## Self Attentive Sentence encoder
 
 ![Emo1](./IRE/static/sent_embed.jpeg)
 
 * We use self attention to compute the sentence embedding for each turn of conversation.
-
 ---
-## Model
-
+### Model
 ![Emo2](./IRE/static/network.jpeg)
 
 * We then concatenate the the three sentence embeddings and feed it to a FCN whose output dimension is equal to the number of output classes.
@@ -81,22 +76,15 @@ for our data set.
     <td class="tg-c3ow"><br>71.07</td>
   </tr>
 </table>
- 
- ---
-
+---
 ## Overall Performance
 
 The average F1-scores are as follows:
 
  * SS-LSTM: 71.34
  * Ours: 71.08 
-
 ---
-
 ## Observation 
- 
-We compared our work with the SS-LSTM presented in the paper ![Sentiment semantic approach for emotion detection in textual conversations](https://arxiv.org/pdf/1707.06996.pdf). Our network performed at par with SS-LSTM if not better, even though we used only one word embedding matrix i.e. the output from our self attentive neural BiLSTM network. 
 
-
-
+We compared our work with the method presented in the [SS-LSTM paper](https://arxiv.org/pdf/1707.06996.pdf). Our network performed at par with SS-LSTM if not better, even though we used only one word embedding matrix i.e. the output from our self attentive neural BiLSTM network. 
 ---
