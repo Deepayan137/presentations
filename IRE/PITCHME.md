@@ -1,7 +1,7 @@
 ## EmoContext
 
 ### An attention based Deep&nbsp;
-Bi-LSTM network for Emotion Detection
+### Bi-LSTM network for Emotion Detection
 
 ---
 
