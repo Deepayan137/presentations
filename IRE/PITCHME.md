@@ -16,14 +16,14 @@ for our data set.
 
 ## Self Attentive Sentence encoder
 
-![Emo1](static/sent_embed.jpeg)
+![Emo1](https://drive.google.com/open?id=1qyX_YmDBs8wDGsG2o-T_NS0TzhvlHRlf)
 
 * We use self attention to compute the sentence embedding for each turn of conversation.
 
 ---
 ## Model
 
-![Emo2](static/metwork.jpeg)
+![Emo2](https://drive.google.com/open?id=1JvdbgmpPXG6pMxCLtTJBAyNw2xKNMMCR)
 
 * We then concatenate the the three sentence embeddings (one for each
 turn of conversation) and feed it to a fully connected neural network 
