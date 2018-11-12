@@ -1,8 +1,12 @@
 ## EmoContext
 
-### An attention based Deep&nbsp;
-### Bi-LSTM network for Emotion Detection
+## An attention based Deep&nbsp;
+## Bi-LSTM network for Emotion Detection
 
+* Deepayan Das
+* Yash Agarwal
+* Navdeep Singh Chahal
+* Sheanan Verma
 ---
 ## Input Embeddings
 
